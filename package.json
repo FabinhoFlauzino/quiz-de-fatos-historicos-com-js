@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "name": "funcoes-de-array-projeto",
+  "version": "1.0.0",
+  "description": "Projeto criado para elaborar um quiz usando javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabio Flauzino",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
