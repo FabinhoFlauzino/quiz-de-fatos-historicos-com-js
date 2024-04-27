@@ -30,3 +30,24 @@ const questoes = [
   { id: 29, pergunta: 'Qual foi o ano do acidente nuclear em Chernobyl?', resposta: '1986' },
   { id: 30, pergunta: 'Em que ano o homem pisou na Lua pela primeira vez?', resposta: '1969' }
 ];
+
+function embaralhaArray(colecaoPerguntas){
+  return colecaoPerguntas.sort(() => Math.random() - 0.5);
+}
+
+function selecionarPerguntasAleatorias(colecaoPerguntas, quantidade){
+  const perguntasEmbaralhadas = embaralhaArray(colecaoPerguntas)
+  return perguntasEmbaralhadas.slice(0, quantidade)
+}
+
+function exibriPerguntas(colecaoPerguntas){
+  colecaoPerguntas.forEach((pergunta, index) => {
+    console.log(`Pergunta ${index + 1}: ${pergunta.pergunta}`);
+  })
+}
+
+const quantidadePerguntas = 10;
+
+const perguntasSelecionadas = selecionarPerguntasAleatorias(questoes, quantidadePerguntas)
+
+console.log(perguntasSelecionadas)
